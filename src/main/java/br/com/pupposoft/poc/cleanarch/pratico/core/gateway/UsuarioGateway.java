@@ -1,8 +1,8 @@
-package br.com.pupposoft.poc.cleanarch.pratico.gateway;
+package br.com.pupposoft.poc.cleanarch.pratico.core.gateway;
 
 import java.util.Optional;
 
-import br.com.pupposoft.poc.cleanarch.pratico.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
 
 public interface UsuarioGateway {
 

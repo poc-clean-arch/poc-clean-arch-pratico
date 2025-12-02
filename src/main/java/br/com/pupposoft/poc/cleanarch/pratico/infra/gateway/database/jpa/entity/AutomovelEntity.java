@@ -1,4 +1,4 @@
-package br.com.pupposoft.poc.cleanarch.pratico.gateway.database.jpa.entity;
+package br.com.pupposoft.poc.cleanarch.pratico.infra.gateway.database.jpa.entity;
 
 import java.time.LocalDate;
 

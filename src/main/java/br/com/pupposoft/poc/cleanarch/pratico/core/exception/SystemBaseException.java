@@ -1,4 +1,4 @@
-package br.com.pupposoft.poc.cleanarch.pratico.exception;
+package br.com.pupposoft.poc.cleanarch.pratico.core.exception;
 
 public abstract class SystemBaseException extends RuntimeException {
 	private static final long serialVersionUID = 3899886033254816856L;

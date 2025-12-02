@@ -1,4 +1,4 @@
-package br.com.pupposoft.poc.cleanarch.pratico.controller.json;
+package br.com.pupposoft.poc.cleanarch.pratico.infra.controller.json;
 
 import java.time.LocalDate;
 

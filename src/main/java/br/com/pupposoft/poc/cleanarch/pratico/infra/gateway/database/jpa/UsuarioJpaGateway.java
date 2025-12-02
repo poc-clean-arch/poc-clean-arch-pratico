@@ -1,16 +1,16 @@
-package br.com.pupposoft.poc.cleanarch.pratico.gateway.database.jpa;
+package br.com.pupposoft.poc.cleanarch.pratico.infra.gateway.database.jpa;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
-import br.com.pupposoft.poc.cleanarch.pratico.domain.Automovel;
-import br.com.pupposoft.poc.cleanarch.pratico.domain.Usuario;
-import br.com.pupposoft.poc.cleanarch.pratico.exception.ErroAoAcessarRepositorioException;
-import br.com.pupposoft.poc.cleanarch.pratico.gateway.UsuarioGateway;
-import br.com.pupposoft.poc.cleanarch.pratico.gateway.database.jpa.entity.UsuarioEntity;
-import br.com.pupposoft.poc.cleanarch.pratico.gateway.database.jpa.repository.UsuarioRepository;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Automovel;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.exception.ErroAoAcessarRepositorioException;
+import br.com.pupposoft.poc.cleanarch.pratico.core.gateway.UsuarioGateway;
+import br.com.pupposoft.poc.cleanarch.pratico.infra.gateway.database.jpa.entity.UsuarioEntity;
+import br.com.pupposoft.poc.cleanarch.pratico.infra.gateway.database.jpa.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

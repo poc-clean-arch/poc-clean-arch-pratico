@@ -1,4 +1,4 @@
-package br.com.pupposoft.poc.cleanarch.pratico.domain;
+package br.com.pupposoft.poc.cleanarch.pratico.core.domain;
 
 import java.time.LocalDate;
 

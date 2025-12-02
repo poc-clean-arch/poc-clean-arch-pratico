@@ -1,4 +1,4 @@
-package br.com.pupposoft.poc.cleanarch.pratico.exception;
+package br.com.pupposoft.poc.cleanarch.pratico.core.exception;
 
 import lombok.Getter;
 

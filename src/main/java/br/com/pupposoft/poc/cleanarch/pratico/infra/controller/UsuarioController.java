@@ -1,13 +1,13 @@
-package br.com.pupposoft.poc.cleanarch.pratico.controller;
+package br.com.pupposoft.poc.cleanarch.pratico.infra.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.pupposoft.poc.cleanarch.pratico.controller.json.UsuarioJson;
-import br.com.pupposoft.poc.cleanarch.pratico.domain.Usuario;
-import br.com.pupposoft.poc.cleanarch.pratico.usecase.CriarUsuarioUsecase;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.usecase.CriarUsuarioUsecase;
+import br.com.pupposoft.poc.cleanarch.pratico.infra.controller.json.UsuarioJson;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
