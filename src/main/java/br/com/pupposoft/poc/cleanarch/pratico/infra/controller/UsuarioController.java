@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Motorista;
 import br.com.pupposoft.poc.cleanarch.pratico.core.usecase.CriarUsuarioUsecase;
 import br.com.pupposoft.poc.cleanarch.pratico.infra.controller.json.UsuarioJson;
 import jakarta.validation.Valid;
@@ -25,8 +25,8 @@ public class UsuarioController {
 		return criarUsuarioUsecase.criar(mapToDomain(usuarioJson));
 	}
 
-	private Usuario mapToDomain(UsuarioJson usuarioJson) {
-		return new Usuario(
+	private Motorista mapToDomain(UsuarioJson usuarioJson) {
+		return new Motorista(
 				usuarioJson.getId(),
 				usuarioJson.getNome(),
 				usuarioJson.getCpf(),

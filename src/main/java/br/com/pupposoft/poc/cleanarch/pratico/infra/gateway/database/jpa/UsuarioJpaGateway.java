@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Component;
 
 import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Automovel;
-import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Motorista;
 import br.com.pupposoft.poc.cleanarch.pratico.core.exception.ErroAoAcessarRepositorioException;
 import br.com.pupposoft.poc.cleanarch.pratico.core.gateway.UsuarioGateway;
 import br.com.pupposoft.poc.cleanarch.pratico.infra.gateway.database.jpa.entity.UsuarioEntity;
@@ -22,7 +22,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 	private final UsuarioRepository usuarioRepository;
 	
 	@Override
-	public Optional<Usuario> obterPorCpf(String cpf) {
+	public Optional<Motorista> obterPorCpf(String cpf) {
 		try {
 			
 			Optional<UsuarioEntity> usuarioEntityOp = usuarioRepository.findByCpf(cpf);
@@ -34,7 +34,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 			
 			UsuarioEntity usuarioEntity = usuarioEntityOp.get();
 			
-			Usuario usuario = mapToDomain(usuarioEntity);
+			Motorista usuario = mapToDomain(usuarioEntity);
 			
 			return Optional.of(usuario);
 			
@@ -47,7 +47,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 	}
 
 	@Override
-	public Long criar(Usuario usuario) {
+	public Long criar(Motorista usuario) {
 		try {
 			
 			UsuarioEntity usuarioEntity = mapToEntity(usuario);
@@ -60,7 +60,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 		}
 	}
 
-	private Usuario mapToDomain(UsuarioEntity usuarioEntity) {
+	private Motorista mapToDomain(UsuarioEntity usuarioEntity) {
 		List<Automovel> automoveis = usuarioEntity.getAutomoveis().stream().map(ae -> {
 			return new Automovel(
 					ae.getId(),
@@ -69,7 +69,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 					null);
 		}).toList();
 		
-		return new Usuario(
+		return new Motorista(
 						usuarioEntity.getId(), 
 						usuarioEntity.getCpf(), 
 						usuarioEntity.getNome(), 
@@ -77,7 +77,7 @@ public class UsuarioJpaGateway implements UsuarioGateway {
 						automoveis);
 	}
 	
-	private UsuarioEntity mapToEntity(Usuario usuario) {
+	private UsuarioEntity mapToEntity(Motorista usuario) {
 		return UsuarioEntity.builder()
 				//FIXME: implementar
 				

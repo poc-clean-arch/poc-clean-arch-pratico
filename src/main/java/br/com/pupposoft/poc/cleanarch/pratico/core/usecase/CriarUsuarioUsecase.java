@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Motorista;
 import br.com.pupposoft.poc.cleanarch.pratico.core.exception.UsuarioComAutomovelAntigoException;
 import br.com.pupposoft.poc.cleanarch.pratico.core.exception.UsuarioExistenteException;
 import br.com.pupposoft.poc.cleanarch.pratico.core.exception.UsuarioMenorIdadeException;
@@ -20,9 +20,9 @@ public class CriarUsuarioUsecase {
 
 	private final UsuarioGateway usuarioGateway;
 
-	public Long criar(Usuario usuario) {
+	public Long criar(Motorista usuario) {
 
-		Optional<Usuario> usuarioOp = usuarioGateway.obterPorCpf(usuario.getCpf());
+		Optional<Motorista> usuarioOp = usuarioGateway.obterPorCpf(usuario.getCpf());
 		
 //		//TODO: as regras tendem a crescer e por isso deveriam estar fora daqui.
 		if(usuarioOp.isPresent()) {

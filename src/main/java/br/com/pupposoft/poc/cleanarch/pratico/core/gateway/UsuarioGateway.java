@@ -2,12 +2,12 @@ package br.com.pupposoft.poc.cleanarch.pratico.core.gateway;
 
 import java.util.Optional;
 
-import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Usuario;
+import br.com.pupposoft.poc.cleanarch.pratico.core.domain.Motorista;
 
 public interface UsuarioGateway {
 
-	Optional<Usuario> obterPorCpf(String cpf);
+	Optional<Motorista> obterPorCpf(String cpf);
 
-	Long criar(Usuario usuario);
+	Long criar(Motorista usuario);
 
 }

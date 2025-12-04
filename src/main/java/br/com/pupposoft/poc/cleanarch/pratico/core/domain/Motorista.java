@@ -9,7 +9,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class Usuario {
+public class Motorista {
 	private Long id;
 	private String nome;
 	private String cpf;
